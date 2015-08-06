@@ -1,38 +1,77 @@
 // Resets, Clearfix, etc
+@import 'partials/reset';
+@import 'partials/clearfix';
 
 // Variables
- 
-// Media Query Ranges 
- 
+
+$dark-color: #222;
+$light-color: #eee;
+$bright-color: orange;
+$padding: 22px;
+
+// Media Query Ranges
+
+$medium-up: "only screen and (min-width : 600px)";
+$large-up: "only screen and (min-width: 900px)";
+
 // Mixins
+
+@mixin header_font($header_font_size: 40px, $header_font_color: $light-color) {
+  font-size: $header_font_size;
+  color: $header_font_color;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+}
 
 // Styles
 body{
-  background-color: orange;
+  background-color: $bright-color;
   text-align: center;
-  color: #EEE;
+  color: $light-color;
+  @media #{$large-up} {
+    background-color: $dark-color;
+  }
 }
- 
-h1, h2, h3, h4{
-  font-family: "Helvetica Neue", "Helvetica", sans-serif;
-}
- 
+
 h1{
-  padding: 20px;
+  @include header_font(62px, $dark-color);
+  padding: $padding;
+  @media #{$medium-up} {
+    color: $light-color;
+  }
+  @media #{$large-up} {
+    color: $bright-color;
+  }
 }
- 
+
 h2{
- 
+  @include header_font;
+  @media #{$medium-up} {
+    color: $bright-color;
+  }
+  @media #{$large-up} {
+    color: $dark-color;
+  }
 }
- 
- 
+
 .block_family{
-  max-width:350px;
+  max-width:390px;
   margin:auto;
+  @media #{$medium-up} {
+    max-width: 560px;
+  }
+  @media #{$large-up} {
+    max-width: 900px;
+  }
 }
- 
+
 .block_family li{
-  background-color: #222;
+  background-color: $dark-color;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: $padding;
+  @media #{$medium-up} {
+    background-color: $light-color;
+  }
+  @media #{$large-up} {
+    background-color: $bright-color;
+  }
 }

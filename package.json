@@ -1,7 +1,7 @@
 {
   "name": "demo_block",
   "version": "1.0.0",
-  "description": "",
+  "description": "### Set up:",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +12,18 @@
     "gulp": "^3.9.0",
     "gulp-connect": "^2.2.0",
     "gulp-sass": "^2.0.1"
-  }
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-sass": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/julzbond/block-family.git"
+  },
+  "bugs": {
+    "url": "https://github.com/julzbond/block-family/issues"
+  },
+  "homepage": "https://github.com/julzbond/block-family"
 }
