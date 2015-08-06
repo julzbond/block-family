@@ -70,8 +70,13 @@ h2{
   padding: $padding;
   @media #{$medium-up} {
     background-color: $light-color;
+    float: left;
+    width: 41%;
+    margin: 0.5%;
   }
   @media #{$large-up} {
     background-color: $bright-color;
+    width: 27%;
+    margin: 0.5%;
   }
 }
