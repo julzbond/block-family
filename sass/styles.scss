@@ -73,10 +73,19 @@ h2{
     float: left;
     width: 41%;
     margin: 0.5%;
+    &:nth-child(odd){
+      background-color: $dark-color;
+    }
   }
   @media #{$large-up} {
     background-color: $bright-color;
     width: 27%;
     margin: 0.5%;
+    &:nth-child(odd){
+      background-color: $bright-color;
+    }
+    &:nth-child(3n-1) {
+      background-color: $light-color;
+    }
   }
 }
